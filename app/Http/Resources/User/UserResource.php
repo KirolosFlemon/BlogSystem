@@ -22,7 +22,7 @@ class UserResource extends JsonResource
             'image' =>  $this->image ?? null,
             'phone' =>  $this->phone ?? null,
             'posts' => $this->whenLoaded('posts', function () {
-                return  PostResource::collection($this->Post);
+                return  PostResource::collection($this->posts);
             }),
 
         ];
