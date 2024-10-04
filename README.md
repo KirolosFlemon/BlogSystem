@@ -41,6 +41,9 @@ php artisan storage:link
 php artisan serve
 ```
 
+```Url for api publish
+https://documenter.getpostman.com/view/20112958/2sAXxMeYih
+```
 
 
 # BlogSystem-task
