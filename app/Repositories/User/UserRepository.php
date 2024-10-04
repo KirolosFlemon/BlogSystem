@@ -20,7 +20,7 @@ class UserRepository
     {
         $id= auth()->user()->id;
     
-        return User::findOrFail($id);
+        return User::with('posts')->findOrFail($id);
     }
 
 }
