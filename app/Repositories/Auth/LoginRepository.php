@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\Hash;
 class LoginRepository
 {
 
+    /**
+     * Authenticates a user and returns the user object with a token.
+     *
+     * @param Request $request
+     *
+     * @return User
+     *
+     * @throws \Exception
+     */
     public function create(Request $request)
     {
 

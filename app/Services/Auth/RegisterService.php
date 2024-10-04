@@ -1,5 +1,4 @@
 <?php
-// app/Services/RegisterService.php
 namespace App\Services\Auth;
 
 use App\Repositories\Auth\RegisterRepository;
@@ -9,14 +8,30 @@ use Illuminate\Support\Facades\DB;
 
 class RegisterService
 {
+    /**
+     * The register repository instance.
+     *
+     * @var \App\Repositories\Auth\RegisterRepository
+     */
     protected $registerRepository;
 
+    /**
+     * Create a new service instance.
+     *
+     * @param  \App\Repositories\Auth\RegisterRepository  $registerRepository
+     * @return void
+     */
     public function __construct(RegisterRepository $registerRepository)
     {
         $this->registerRepository = $registerRepository;
     }
 
-
+    /**
+     * Creates a new user and returns the created user object.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \App\Models\User
+     */
     public function createRegister(Request $request)
     {
         try {
@@ -35,3 +50,4 @@ class RegisterService
 
    
 }
+
