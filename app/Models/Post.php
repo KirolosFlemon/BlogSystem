@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
+
+class Post extends Model
+{
+    use HasFactory, SoftDeletes;
+
+    protected $fillable = [
+        'title',
+        'content',
+        'user_id',
+        'image',
+    ];
+
+    public function getImageAttribute($value)
+    {
+        return ($value) ? Storage::url($value) : $value;
+    }
+
+    public function setImageAttribute($value)
+    {
+        if (is_file($value)) {
+            $this->attributes['image'] =  $value->store('uploads/Posts');
+        }
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
