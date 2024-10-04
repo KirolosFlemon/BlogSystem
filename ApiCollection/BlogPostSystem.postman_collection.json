@@ -1,0 +1,548 @@
+{
+	"info": {
+		"_postman_id": "28e52dd5-3039-4fc2-bb7e-3f942f79d1f2",
+		"name": "BlogPostSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20112958",
+		"_collection_link": "https://cloudy-crater-877188.postman.co/workspace/My-Workspace~85249b49-f368-42a9-847d-08ce9c1a94cf/collection/20112958-28e52dd5-3039-4fc2-bb7e-3f942f79d1f2?action=share&source=collection_link&creator=20112958"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-localization",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/admin/user/get",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"user",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Post",
+									"description": "required || string || min:3 || max:150",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Minima rem distinctio rhoncus architecto labore ante aliquid varius pharetra, delectus ratione mollitia parturient occaecati? Modi, donec consequat! Lacinia lacus.\n\nDis arcu integer, lorem expedita, ipsa, pede voluptate dignissim mi, iusto sunt enim cras. Platea molestie hic consectetur. Soluta! Officiis.",
+									"description": "required || string || min:5",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "nullable || image || mimes:jpeg,bmp,png,webp,svg,gif,tiff,jpg",
+									"type": "file",
+									"src": "/C:/Users/kero/Pictures/oh.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/admin/post/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "post edit",
+									"description": "required || string || min:3 || max:150",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Minima rem distinctio rhoncus architecto labore ante aliquid varius pharetra, delectus ratione mollitia parturient occaecati? Modi, donec consequat! Lacinia lacus.\n\nDis arcu integer, lorem expedita, ipsa, pede voluptate dignissim mi, iusto sunt enim cras. Platea molestie hic consectetur. Soluta! Officiis.",
+									"description": "required || string || min:5",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "nullable || image || mimes:jpeg,bmp,png,webp,svg,gif,tiff,jpg",
+									"type": "file",
+									"src": "/C:/Users/kero/Pictures/1.jpg"
+								},
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/admin/post/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"post",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-localization",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/admin/post/all?is_paginate=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"post",
+								"all"
+							],
+							"query": [
+								{
+									"key": "is_paginate",
+									"value": "10",
+									"description": "optinal"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-localization",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/admin/post/get?id=5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"post",
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resotre Deleted",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-localization",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/admin/post/restore?id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"post",
+								"restore"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Delete",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-localization",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/admin/post/get-delete-soft",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"post",
+								"get-delete-soft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-localization",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/admin/post/delete?id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"post",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "kirolous",
+									"description": "required|| string || min:1 || max:60",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01204825686",
+									"description": "required|| digits:11 || uniqe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "kirolous.felemon95@gmail.com",
+									"description": "required|| uniqe",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"description": "required|| min:8",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"description": "required || Same Password",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "nullable || image || mimes:jpeg,bmp,png,webp,svg,gif,tiff,jpg",
+									"type": "file",
+									"src": "/C:/Users/kero/Pictures/3.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "kirolous.felemon95@gmail.com",
+									"description": "Required || Email ",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"description": "Required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2xhYmlmeS1iYWNrZW5kLmRldmVsb3BuZXR3b3JrLm5ldC9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTY5MzIyNzAxOSwiZXhwIjozNTg1Mzg3MDE5LCJuYmYiOjE2OTMyMjcwMTksImp0aSI6IkJxU0tVZmF3YnVkbHl5ZGMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.a5IBB5w84byk99nY0LK0VM6kvWc-UfyAUplnsMKgfk0",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjgwNDc0ODIsImV4cCI6MTcyODA1MTA4MiwibmJmIjoxNzI4MDQ3NDgyLCJqdGkiOiIwR3pKZ1g3WU1QVDd4dDcyIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Dnm3kAK4pgVJKLxNsNJElf7xjvxgaVKa9UX2tPoxN6w",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
