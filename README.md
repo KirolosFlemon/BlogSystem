@@ -12,7 +12,7 @@ git clone https://github.com/KirolosFlemon/BlogSystem.git
 ```
 
 ```sh
-cd BlogSystem.git
+cd BlogSystem
 ```
 
 ```sh
