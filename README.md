@@ -45,5 +45,7 @@ php artisan serve
 https://documenter.getpostman.com/view/20112958/2sAXxMeYih
 ```
 
+-- collection  and pdf documantation for Api in folder ApiCollection
+
 
 # BlogSystem-task
